@@ -1,0 +1,22 @@
+odoo.define("exo_website.actor_table", function (require) {
+  "use strict";
+
+  var Widget = require("web.Widget");
+  console.log("table");
+
+  return Widget.extend({
+    template: 'exo_website.actorsTable',
+    xmlDependencies: ['/exo_website/static/src/js/app-actor/views/actors_table.xml'],
+
+    init: function (parent, options) {
+      this._super.apply(this, arguments);
+      this.actors = [];
+    },
+
+    start: function () {
+      this._super.apply(this, arguments);
+      this.actors;
+    },
+  });
+  return ActorsTable;
+});
